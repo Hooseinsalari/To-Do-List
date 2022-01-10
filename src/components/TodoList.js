@@ -9,11 +9,11 @@ const TodoList = ({ todos, setTodos }) => {
 
     const completeHandler = (id) => {
         const newTodos = [...todos]
-        const selectedTodo = newTodos.findIndex((todo) => todo.id === id)
-        let isCompleted = todos[selectedTodo]
-        isCompleted.isComplete = !isCompleted.isComplete;
-        setTodos(newTodos)
+        const index = newTodos.findIndex((todo) => todo.id === id)
+        let selectedTodo = newTodos[index]
+        selectedTodo.isComplete = !selectedTodo.isComplete;
         console.log(todos)
+        setTodos(newTodos)
     }
 
   return (
