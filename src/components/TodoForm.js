@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 // style
 import styles from "./TodoForm.module.css"
 
+// svg
+import add from "../svg/add.svg";
+
 const TodoForm = ({setTodos, todos}) => {
     const [todo, setTodo] = useState("")
 
@@ -29,7 +32,7 @@ const TodoForm = ({setTodos, todos}) => {
 
     return (
             <form onSubmit={submitHandler} className={styles.container}>
-                <button type='submit' className={styles.addBtn}>add</button>
+                <button type='submit' className={styles.addBtn}><img src={add} /></button>
                 <input placeholder='add todo ...' type="text" value={todo} onChange={inputHandler} className={styles.input} />
             </form>
     );

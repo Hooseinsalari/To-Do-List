@@ -3,7 +3,9 @@
     margin: auto;
     width: 30rem;
     padding: 9px;
-    border-radius: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .input {
@@ -12,9 +14,25 @@
     border: none;
     outline: none;
     height: 3rem;
-    margin-left: 10px;
+    margin-left: 20px;
+    color: #ffffff;
+}
+
+.input[type="text"] {
+    font-size: 16px;
 }
 
 .addBtn {
-    
+    background-color: hsl(235, 24%, 19%);
+    border: 2px solid gray;
+    border-radius: 50%;
+    height: 24px;
 }
+
+.addBtn img {
+    width: 20px;
+}
+/* 
+.addBtn img:hover {
+    fill: green;
+} */

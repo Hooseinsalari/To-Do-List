@@ -1,0 +1,35 @@
+.todos {
+    background-color: hsl(235, 24%, 19%);
+    margin-top: 20px;
+    border-radius: 5px 5px 0 0;
+    max-height: 20rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.todos::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+}
+
+.todos::-webkit-scrollbar-track {
+    background: hsl(235, 24%, 19%);
+}
+
+.todos::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid gray;
+}
+
+.footer {
+    background-color: hsl(235, 24%, 19%);
+    padding: 5px;
+    border-radius: 0 0 10px 10px;
+}
