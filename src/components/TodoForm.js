@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+// style
+import styles from "./TodoForm.module.css"
+
 const TodoForm = ({setTodos, todos}) => {
     const [todo, setTodo] = useState("")
 
@@ -14,17 +17,21 @@ const TodoForm = ({setTodos, todos}) => {
             id: Math.floor(Math.random() * 1000),
             isComplete: false
         }
-        setTodos([...todos, newTodo])
+
+        if(todo) {
+            setTodos([...todos, newTodo])
+        } else {
+            alert("enter gozo")
+        }
+
         setTodo("")
     }
 
     return (
-        <div>
-            <form onSubmit={submitHandler}>
-                <input type="text" value={todo} onChange={inputHandler} />
-                <button type='submit'>add</button>
+            <form onSubmit={submitHandler} className={styles.container}>
+                <button type='submit' className={styles.addBtn}>add</button>
+                <input placeholder='add todo ...' type="text" value={todo} onChange={inputHandler} className={styles.input} />
             </form>
-        </div>
     );
 };
 
