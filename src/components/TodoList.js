@@ -3,6 +3,9 @@ import React from "react";
 // style
 import styles from "./TodoList.module.css";
 
+// icons
+import { FaTimes, FaCheck, FaRegEdit } from "react-icons/fa";
+
 const TodoList = ({ todos, setTodos }) => {
   const deleteHandler = (id) => {
     const filterTodos = todos.filter((todo) => todo.id !== id);
@@ -22,23 +25,35 @@ const TodoList = ({ todos, setTodos }) => {
     <div className={styles.container}>
       <div className={styles.todos}>
         {todos.map((todo) => (
-          <div key={todo.id} className={styles.todo}>
-            <div>
+          <div key={todo.id} className={todo.isComplete ? styles.todoComplete :styles.todo}>
+            <div className={todo.isComplete ? styles.todoLeftComplete : styles.todoLeft}>
+              <button
+                className={styles.checkBtn}
+                onClick={() => completeHandler(todo.id)}
+              >
+                <FaCheck className={styles.checkIcon} />
+              </button>
               <p onClick={() => completeHandler(todo.id)}>{todo.title}</p>
             </div>
-            <div>
-              <button>edit</button>
-              <button onClick={() => deleteHandler(todo.id)}>delete</button>
+            <div className={styles.todoRight}>
+              <button className={styles.editBtn}><FaRegEdit className={styles.editIcon} /></button>
+              <button
+                className={styles.deleteBtn}
+                onClick={() => deleteHandler(todo.id)}
+              >
+                <FaTimes className={styles.deleteIcon} />
+              </button>
             </div>
           </div>
         ))}
       </div>
-      {
-        todos.length ?
+      <div>
+      {todos.length ? (
         <div className={styles.footer}>
           <p>salam</p>
-        </div> : null
-      }
+        </div>
+      ) : null}
+      </div>
     </div>
   );
 };
