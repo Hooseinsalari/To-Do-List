@@ -6,7 +6,7 @@ import styles from "./TodoForm.module.css";
 // svg
 import add from "../svg/add.svg";
 
-const TodoForm = ({ setTodos, todos, filterTodos, setStatus, status }) => {
+const TodoForm = ({ addTodoHandler, todos, filterTodos, setStatus, status }) => {
   const [todo, setTodo] = useState("");
 
   const inputHandler = (event) => {
@@ -14,19 +14,12 @@ const TodoForm = ({ setTodos, todos, filterTodos, setStatus, status }) => {
   };
 
   const submitHandler = (event) => {
-    event.preventDefault();
-    const newTodo = {
-      title: todo,
-      id: Math.floor(Math.random() * 1000),
-      isComplete: false,
-    };
-
-    if (todo) {
-      setTodos([...todos, newTodo]);
-    } else {
-      alert("enter gozo");
+    event.preventDefault()
+    if (!todo) {
+      alert("enter todos!");
+      return;
     }
-
+    addTodoHandler(todo);
     setTodo("");
   };
 

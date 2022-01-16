@@ -13,6 +13,41 @@ const TodoApp = () => {
   // default value for category
   const [status, setStatus] = useState("all");
 
+  useEffect(() => {
+    filterTodos(status)
+  }, [todos, status])
+
+  // -------
+
+  const addTodoHandler = (input) => {
+    const newTodo = {
+      id: Math.floor(Math.random() * 1000),
+      text: input,
+      isComplete: false,
+    };
+    setTodos([...todos, newTodo]);
+  };
+
+  // -------
+
+  const deleteHandler = (id) => {
+    const filteredTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(filteredTodos);
+  };
+
+  // --------
+
+  const completeHandler = (id) => {
+    const index = todos.findIndex((todo) => todo.id === id);
+    const selectedTodo = { ...todos[index] };
+    selectedTodo.isComplete = !selectedTodo.isComplete;
+    const updateTodos = [...todos];
+    updateTodos[index] = selectedTodo;
+    setTodos(updateTodos);
+  };
+
+  // --------
+
   const filterTodos = (status) => {
     switch (status) {
       case "complete":
@@ -26,27 +61,25 @@ const TodoApp = () => {
     }
   };
 
-  useEffect(() => {
-    setFilteredTodos(todos);
-  }, [todos]);
+  // useEffect(() => {
+  //   setFilteredTodos(todos);
+  // }, [todos]);
 
   return (
     <div className={styles.container}>
       <h1>To do app</h1>
       <TodoForm
         todos={todos}
-        setTodos={setTodos}
         filterTodos={filterTodos}
-        filteredTodos={filteredTodos}
         status={status}
         setStatus={setStatus}
+        addTodoHandler={addTodoHandler}
       />
       <TodoList
         todos={filteredTodos}
-        setTodos={setTodos}
-        filterTodos={filterTodos}
-        filteredTodos={filteredTodos}
-        setStatus={setStatus}
+        onDelete={deleteHandler}
+        onComplete={completeHandler}
+        unCompleteTodos={todos.filter((todo) => !todo.isComplete).length}
       />
     </div>
   );

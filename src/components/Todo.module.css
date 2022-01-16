@@ -1,0 +1,104 @@
+.todo , .todoComplete {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid gray;
+}
+
+.todoComplete {
+    opacity: 0.5;
+}
+
+.footer {
+    background-color: hsl(235, 24%, 19%);
+    padding: 5px;
+    border-radius: 0 0 5px 5px;
+}
+
+/* section left todo */
+.todoLeft , .todoLeftComplete {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkBtn {
+    outline: none;
+    background-color: hsl(235, 24%, 19%);
+    margin-right: 22px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    width: 25px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkBtn:hover {
+    opacity: 1;
+}
+
+.checkBtn .checkIcon {
+    color: #fff;
+    margin-top: 5px;
+    visibility: hidden;
+}
+
+.todoLeftComplete .checkBtn .checkIcon {
+    visibility: visible;
+}
+
+.todoLeft p , .todoLeftComplete p {
+    color: #fff;
+    font-size: 18px;
+}
+
+.todoLeftComplete p {
+    text-decoration: line-through;
+}
+
+/* ============================ */
+
+
+/* todo right section */
+
+.todoRight {
+    display: flex;
+    align-items: center;
+}
+
+.editBtn {
+    border: none;
+    outline: none;
+    background-color: hsl(235, 24%, 19%);
+    cursor: pointer;
+}
+
+.editIcon {
+    font-size: 21px;
+    color: #fff;
+    opacity: 0.3;
+}
+
+.editIcon:hover {
+    opacity: 1;
+}
+
+.deleteBtn {
+    border: none;
+    outline: none;
+    background-color: hsl(235, 24%, 19%);
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.deleteBtn .deleteIcon {
+    font-size: 24px;
+    color: #fff;
+    opacity: 0.3;
+}
+
+.deleteIcon:hover {
+    opacity: 1;
+}
