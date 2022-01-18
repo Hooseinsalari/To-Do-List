@@ -1,10 +1,22 @@
 .App {
   text-align: center;
-  position: relative;
-  background: url("./img/bg-desc.jpg");
-  background-repeat: no-repeat;
   width: 100%;
   height: 15rem;
+}
+
+.bannerDesc, .banerMob {
+  width: 100%;
+  height: 15rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.banerMob {
+  /* display: none; */
+  visibility: hidden;
+  width: 100%;
 }
 
 /* .App img {
@@ -15,8 +27,19 @@
 } */
 
 .compo {
+  /* margin-top: 50px; */
   z-index: 10;
-  position: absolute;
-  top: 38%;
-  left: 34%;
+  position: relative;
+  top: 50px;
+}
+
+
+@media screen and (max-width: 600px ) {
+  .bannerDesc {
+    display: none;
+  }
+
+  .banerMob {
+    visibility: visible;
+  }
 }

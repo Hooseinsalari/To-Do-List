@@ -10,12 +10,6 @@
     opacity: 0.5;
 }
 
-.footer {
-    background-color: hsl(235, 24%, 19%);
-    padding: 5px;
-    border-radius: 0 0 5px 5px;
-}
-
 /* section left todo */
 .todoLeft , .todoLeftComplete {
     display: flex;

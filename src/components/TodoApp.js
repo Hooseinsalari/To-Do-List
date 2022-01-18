@@ -6,12 +6,14 @@ import TodoList from "./TodoList";
 
 // style
 import styles from "./TodoApp.module.css";
+import EditModal from "./EditModal";
 
 const TodoApp = () => {
   const [todos, setTodos] = useState([]);
   const [filteredTodos, setFilteredTodos] = useState([]);
   // default value for category
   const [status, setStatus] = useState("all");
+  
 
   useEffect(() => {
     filterTodos(status)
@@ -27,6 +29,10 @@ const TodoApp = () => {
     };
     setTodos([...todos, newTodo]);
   };
+
+  // -------
+
+  
 
   // -------
 
@@ -61,9 +67,17 @@ const TodoApp = () => {
     }
   };
 
-  // useEffect(() => {
-  //   setFilteredTodos(todos);
-  // }, [todos]);
+  // --------
+
+  const updateTodo = (id, newValue) => {
+    const index = todos.findIndex((todo) => todo.id === id);
+    const selectedTodo = { ...todos[index] };
+    selectedTodo.text = newValue;
+    const updateTodos = [...todos];
+    updateTodos[index] = selectedTodo;
+    setTodos(updateTodos);
+  }
+ 
 
   return (
     <div className={styles.container}>
@@ -80,6 +94,8 @@ const TodoApp = () => {
         onDelete={deleteHandler}
         onComplete={completeHandler}
         unCompleteTodos={todos.filter((todo) => !todo.isComplete).length}
+        onUpdateTodo={updateTodo}
+        addTodoHandler={addTodoHandler}
       />
     </div>
   );
