@@ -21,7 +21,7 @@
     outline: none;
     background-color: hsl(235, 24%, 19%);
     margin-right: 22px;
-    border: 2px solid gray;
+    border: 2px solid hsl(234, 11%, 52%);
     border-radius: 50%;
     width: 25px;
     cursor: pointer;
@@ -31,10 +31,11 @@
 
 .checkBtn:hover {
     opacity: 1;
+    border: 2px solid hsl(234, 39%, 85%)
 }
 
 .checkBtn .checkIcon {
-    color: #fff;
+    color: hsl(234, 39%, 85%);
     margin-top: 5px;
     visibility: hidden;
 }
@@ -95,4 +96,26 @@
 
 .deleteIcon:hover {
     opacity: 1;
+}
+
+/* responsive */
+
+@media screen and (max-width: 355px) {
+    .todo , .todoComplete {
+        padding: 10px;
+    }
+
+    .checkBtn {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .todo , .todoComplete {
+        padding: 14px;
+    }
+
+    .checkBtn {
+        margin-right: 12px;
+    }
 }

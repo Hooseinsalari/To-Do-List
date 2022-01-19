@@ -8,6 +8,8 @@ import TodoList from "./TodoList";
 import styles from "./TodoApp.module.css";
 import EditModal from "./EditModal";
 
+import bgDesc from "../img/bg-desc.jpg";
+
 const TodoApp = () => {
   const [todos, setTodos] = useState([]);
   const [filteredTodos, setFilteredTodos] = useState([]);
@@ -81,7 +83,7 @@ const TodoApp = () => {
 
   return (
     <div className={styles.container}>
-      <h1>To do app</h1>
+      <h1 className={styles.title}>To do app</h1>
       <TodoForm
         todos={todos}
         filterTodos={filterTodos}

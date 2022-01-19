@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .container {
     background-color: hsl(235, 24%, 19%);
     margin: auto;
@@ -8,14 +10,13 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    transition: all 0.5s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .upSection{
     display: flex;
     align-items: center;
 }
-
 
 .input {
     width: 26rem;
@@ -24,33 +25,36 @@
     outline: none;
     height: 3rem;
     margin-left: 20px;
-    color: #ffffff;
+    color: #eeeeee;
 }
 
 .input[type="text"] {
-    font-size: 16px;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .addBtn {
     background-color: hsl(235, 24%, 19%);
     border: 2px solid gray;
     border-radius: 50%;
-    height: 24px;
+    height: 26px;
     margin-left: 10px;
+    cursor: pointer;
 }
 
-.addBtn img {
-    width: 20px;
+.addBtn .addIcon {
+    font-size: 22px;
+    color: hsl(234, 39%, 85%);
+    transition: color 0.2s ease-in-out;
 }
-/* 
-.addBtn img:hover {
-    fill: green;
-} */
 
-
+.addBtn .addIcon:hover {
+    color: hsl(236, 33%, 92%);
+}
 
 .btnsContiner {
-    border-top: 1px solid gray;
+    border-top: 1px solid #a3a3a3;
+    border-top-style: groove;
     width: 30rem;
 }
 
@@ -61,11 +65,62 @@
     margin: 10px 25px 3px;
     font-size: 16px;
     cursor: pointer;
-    color: #ffffff;
-    transition: all 0.3s ease-in-out;
+    color: hsl(234, 11%, 52%);
+    transition: all 0.2s ease-in-out;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.cateBtn:hover {
+    color: hsl(236, 33%, 92%);
 }
 
 .btnActive {
-    color: #3047f6;
-    text-decoration: underline;
+    color: hsl(220, 98%, 61%);
+}
+
+/* responsive */
+
+@media screen and (max-width: 511px) {
+    .container , .btnsContiner{
+        width: 25rem;
+    }
+
+    .input {
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width: 417px) {
+    .container , .btnsContiner{
+        width: 23rem;
+    }
+
+    .input {
+        width: 18rem;
+        margin-left: 18px;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .container , .btnsContiner{
+        width: 21rem;
+    }
+
+    .input {
+        width: 17rem;
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width: 355px) {
+    .container , .btnsContiner{
+        width: 19rem;
+    }
+
+    .input {
+        width: 16rem;
+        margin-left: 10px;
+    }
 }

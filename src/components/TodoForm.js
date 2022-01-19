@@ -3,8 +3,8 @@ import React, { useState } from "react";
 // style
 import styles from "./TodoForm.module.css";
 
-// svg
-import add from "../svg/add.svg";
+// icons
+import { FaPlusCircle } from "react-icons/fa";
 
 const TodoForm = ({ addTodoHandler, todos, filterTodos, setStatus, status }) => {
   const [todo, setTodo] = useState("");
@@ -34,7 +34,7 @@ const TodoForm = ({ addTodoHandler, todos, filterTodos, setStatus, status }) => 
       <form onSubmit={submitHandler}>
         <div className={styles.upSection}>
           <button type="submit" className={styles.addBtn}>
-            <img src={add} />
+            <FaPlusCircle className={styles.addIcon} />
           </button>
           <input
             placeholder="add todo ..."

@@ -32,36 +32,40 @@ const TodoList = ({
 
   return (
     <div className={styles.container}>
-      <div className={styles.todos}>
-        {todos.length ?
-        todos.map((todo) => (
-          <Todo
-            key={todo.id}
-            todo={todo}
-            onEdit={() => editTodoHandler(todo)}
-            onDelete={onDelete}
-            onComplete={onComplete}
-          />
-        )) : <h2 className={{"padding":"10px"}}>Empty</h2>  
-      }
-      </div>
-      <div>
+      {todos.length ? (
+        <div className={styles.todos}>
+          {todos.map((todo) => (
+            <Todo
+              key={todo.id}
+              todo={todo}
+              onEdit={() => editTodoHandler(todo)}
+              onDelete={onDelete}
+              onComplete={onComplete}
+            />
+          ))}
+        </div>
+      ) : (
+        <div className={styles.emptyContainer}>
+          <h2 className={styles.emptyAlert}>Add Some Todos</h2>
+        </div>
+      )}
+      <div className={styles.footerContainer}>
         {todos.length ? (
           <div className={styles.footer}>
-            <p>{unCompleteTodos} items left</p>
+            <p className={styles.footerFirstChild}>{unCompleteTodos} items left</p>
+            <p className={styles.footerLastChild}>Be strong and do your todos</p>
           </div>
         ) : null}
       </div>
-      {
-        edit.id ? 
+      {edit.id ? (
         <EditModal
-        addTodoHandler={submitTodo}
-        setShowModal={setShowModal}
-        showModal={showModal}
-        edit={edit}
-        setEdit={setEdit}
-      />: null
-      }
+          addTodoHandler={submitTodo}
+          setShowModal={setShowModal}
+          showModal={showModal}
+          edit={edit}
+          setEdit={setEdit}
+        />
+      ) : null}
     </div>
   );
 };

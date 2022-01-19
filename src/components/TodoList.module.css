@@ -1,14 +1,17 @@
 .container {
     width: 30rem;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .todos {
     background-color: hsl(235, 24%, 19%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -5px 15px;
     max-height: 20rem;
     overflow-x: hidden;
     overflow-y: scroll;
-    transition: all 0.3s ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
+    border-radius: 5px 5px 0 0;
 }
 
 .todos::-webkit-scrollbar {
@@ -28,5 +31,72 @@
     background-color: hsl(235, 24%, 19%);
     padding: 5px;
     border-radius: 0 0 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 25px;
+    color: #eeeeee;
 }
 
+.footer p {
+    opacity: 0.5;
+} 
+
+.emptyContainer {
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 5px;
+}
+
+.emptyAlert {
+    padding: 15px;
+    color: #fff;
+    font-size: 20px;
+}
+
+/* responsive */
+
+@media screen and (max-width: 511px) {
+    .container , .btnsContiner{
+        width: 25rem;
+    }
+}
+
+@media screen and (max-width: 417px) {
+    .container , .btnsContiner{
+        width: 23rem;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .container , .btnsContiner{
+        width: 21rem;
+    }
+
+    .todos {
+        max-height: 15rem;
+    }
+
+    .footer {
+        justify-content: center;
+    }
+    .footer .footerLastChild {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 355px) {
+    .container , .btnsContiner{
+        width: 19rem;
+    }
+
+    .todos {
+        max-height: 15rem;
+    }
+
+    .footer {
+        justify-content: center;
+    }
+    .footer .footerLastChild {
+        display: none;
+    }
+}

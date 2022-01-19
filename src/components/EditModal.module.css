@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .container {
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
@@ -13,7 +15,7 @@
 }
 
 .modal {
-    background-color: #fff;
+    background-color: hsl(235, 24%, 19%);
     padding: 20px;
     margin: auto 5px;
     text-align: center;
@@ -21,6 +23,7 @@
     border-radius: 10px;
     width: 25rem;
     height: 20rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .mainModal {
@@ -28,5 +31,108 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    height: 8rem;
+    height: 11rem;
+}
+
+.title {
+    width: 22rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title h3 {
+    color: hsl(234, 39%, 85%);
+    font-size: 22px;
+}
+
+.title .closeBtn {
+    background-color: hsl(235, 24%, 19%);
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: hsl(236, 33%, 92%);
+    cursor: pointer;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formInput {
+    width: 20rem;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid hsl(235, 21%, 11%);
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.formInput[type="text"] {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.submitBtn {
+    width: 5rem;
+    height: 2rem;
+    margin: auto;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: hsl(236, 33%, 92%);
+    border: 2px solid hsl(235, 21%, 11%);
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+  opacity: .9;
+}
+
+.submitBtn:active {
+  outline: 0;
+}
+
+.submitBtn:focus {
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+/* responsive */
+
+@media screen and (max-width: 417px) {
+    .modal {
+        width: 23rem;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .modal {
+        width: 20rem;
+    }
+
+    .title {
+        width: 18rem;
+    }
+
+    .formInput {
+        width: 18rem;
+    }
+}
+
+@media screen and (max-width: 355px) {
+    .modal {
+        width: 19rem;
+    }
+
+    .title {
+        width: 18rem;
+    }
+
+    .formInput {
+        width: 18rem;
+    }
 }
