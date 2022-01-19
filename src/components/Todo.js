@@ -24,7 +24,7 @@ const Todo = ({todo, onDelete, onComplete, onEdit}) => {
               >
                 <FaCheck className={styles.checkIcon} />
               </button>
-              <p onClick={() => onComplete(todo.id)}>{todo.text}</p>
+              <p onClick={() => onComplete(todo.id)} className={styles.todoText}>{todo.text}</p>
             </div>
             <div className={styles.todoRight}>
               <button className={styles.editBtn} onClick={() => onEdit(todo.id)}>

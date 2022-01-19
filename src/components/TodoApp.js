@@ -79,6 +79,19 @@ const TodoApp = () => {
     updateTodos[index] = selectedTodo;
     setTodos(updateTodos);
   }
+
+  // -----
+
+  // save in local 
+
+  useEffect(() => {
+    const saveData = JSON.parse(localStorage.getItem("todos"))
+    if(saveData) setTodos(saveData)
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos))
+  }, [todos])
  
 
   return (

@@ -44,7 +44,7 @@
     visibility: visible;
 }
 
-.todoLeft p , .todoLeftComplete p {
+.todoLeft .todoText , .todoLeftComplete .todoText {
     color: #fff;
     font-size: 18px;
 }
@@ -99,6 +99,21 @@
 }
 
 /* responsive */
+@media screen and (max-width: 385px) {
+    .todo , .todoComplete {
+        padding: 14px;
+    }
+
+    .checkBtn {
+        margin-right: 12px;
+    }
+
+    .todoLeft .todoText , .todoLeftComplete .todoText {
+        color: #fff;
+        font-size: 16px;
+    }
+    
+}
 
 @media screen and (max-width: 355px) {
     .todo , .todoComplete {
@@ -108,14 +123,10 @@
     .checkBtn {
         margin-right: 10px;
     }
-}
 
-@media screen and (max-width: 385px) {
-    .todo , .todoComplete {
-        padding: 14px;
-    }
-
-    .checkBtn {
-        margin-right: 12px;
+    .todoLeft .todoText , .todoLeftComplete .todoText {
+        color: #fff;
+        font-size: 15px;
     }
 }
+
