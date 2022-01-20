@@ -99,9 +99,21 @@
 }
 
 /* responsive */
+
+@media screen and (max-width: 420px) {
+    .todoRight {
+        width: 2.2rem;
+    }
+
+}
+
 @media screen and (max-width: 385px) {
     .todo , .todoComplete {
         padding: 14px;
+    }
+
+    .todoRight {
+        width: 2.5rem;
     }
 
     .checkBtn {
@@ -111,6 +123,8 @@
     .todoLeft .todoText , .todoLeftComplete .todoText {
         color: #fff;
         font-size: 16px;
+        text-align: left;
+
     }
     
 }
@@ -120,13 +134,23 @@
         padding: 10px;
     }
 
+    .todoRight {
+        width: 2.3rem;
+    }
+
     .checkBtn {
         margin-right: 10px;
+        padding: 0 10px;
     }
 
     .todoLeft .todoText , .todoLeftComplete .todoText {
         color: #fff;
         font-size: 15px;
+        text-align: left;
+    }
+
+    .deleteBtn {
+        margin-left: 5px;
     }
 }
 

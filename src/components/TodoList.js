@@ -3,7 +3,6 @@ import EditModal from "./EditModal";
 
 // component
 import Todo from "./Todo";
-import TodoForm from "./TodoForm";
 
 // style
 import styles from "./TodoList.module.css";

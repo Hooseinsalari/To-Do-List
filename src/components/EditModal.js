@@ -1,4 +1,4 @@
-import React, {useRef, useState, useEffect} from "react";
+import React, {useState} from "react";
 
 // styles
 import styles from "./EditModal.module.css";
@@ -6,7 +6,7 @@ import styles from "./EditModal.module.css";
 // icons
 import { FaTimes } from "react-icons/fa";
 
-const EditModal = ({ showModal, setShowModal, addTodoHandler, edit }) => {
+const EditModal = ({ showModal, setShowModal, addTodoHandler, edit, setEdit }) => {
 
   const [todo, setTodo] = useState(edit ? edit.text : "");
 
@@ -22,7 +22,13 @@ const EditModal = ({ showModal, setShowModal, addTodoHandler, edit }) => {
     }
     addTodoHandler(todo);
     setTodo("");
+    setShowModal(false)
   };
+
+  const closeModalHandler = () => {
+    setShowModal(false)
+    setEdit({ id: null, text: "" });
+  }
 
   return (
     <>
@@ -32,7 +38,7 @@ const EditModal = ({ showModal, setShowModal, addTodoHandler, edit }) => {
             <div className={styles.mainModal}>
               <div className={styles.title}>
                 <h3>Edit Todo</h3>
-                <button className={styles.closeBtn} onClick={() => setShowModal(false)}><FaTimes className={styles.closeIcon} /></button>
+                <button className={styles.closeBtn} onClick={closeModalHandler}><FaTimes className={styles.closeIcon} /></button>
               </div>
               <form className={styles.main} onSubmit={submitHandler} className={styles.form} >
                   <input className={styles.formInput} type="text" value={todo} onChange={inputHandler}  />

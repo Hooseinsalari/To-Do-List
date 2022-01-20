@@ -6,9 +6,6 @@ import TodoList from "./TodoList";
 
 // style
 import styles from "./TodoApp.module.css";
-import EditModal from "./EditModal";
-
-import bgDesc from "../img/bg-desc.jpg";
 
 const TodoApp = () => {
   const [todos, setTodos] = useState([]);
