@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-size: 100% 45vh;
   width: 100%;
+  height: 100vh;
 }
 
 .component {
@@ -25,6 +26,6 @@
   .App {
     background: url("./img/bg-mob.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 230px;
+    background-size: 100% 240px;
   }
 }
