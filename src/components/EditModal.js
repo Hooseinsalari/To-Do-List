@@ -6,6 +6,9 @@ import styles from "./EditModal.module.css";
 // icons
 import { FaTimes } from "react-icons/fa";
 
+// toast
+import { notify } from "./Toastify";
+
 const EditModal = ({ showModal, setShowModal, addTodoHandler, edit, setEdit }) => {
 
   const [todo, setTodo] = useState(edit ? edit.text : "");
@@ -17,10 +20,10 @@ const EditModal = ({ showModal, setShowModal, addTodoHandler, edit, setEdit }) =
   const submitHandler = (event) => {
     event.preventDefault()
     if (!todo) {
-      alert("enter todos!");
       return;
     }
     addTodoHandler(todo);
+    notify("success", "successfully updated")
     setTodo("");
     setShowModal(false)
   };
@@ -40,7 +43,7 @@ const EditModal = ({ showModal, setShowModal, addTodoHandler, edit, setEdit }) =
                 <h3>Edit Todo</h3>
                 <button className={styles.closeBtn} onClick={closeModalHandler}><FaTimes className={styles.closeIcon} /></button>
               </div>
-              <form className={styles.main} onSubmit={submitHandler} className={styles.form} >
+              <form onSubmit={submitHandler} className={styles.form} >
                   <input className={styles.formInput} type="text" value={todo} onChange={inputHandler}  />
                   <button className={styles.submitBtn} type="submit">update</button>
               </form>

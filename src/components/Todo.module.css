@@ -38,6 +38,7 @@
     color: hsl(234, 39%, 85%);
     margin-top: 5px;
     visibility: hidden;
+    position: absolote;
 }
 
 .todoLeftComplete .checkBtn .checkIcon {
@@ -47,10 +48,11 @@
 .todoLeft .todoText , .todoLeftComplete .todoText {
     color: #fff;
     font-size: 18px;
+    text-align: left;
 }
 
 .todoLeftComplete p {
-    text-decoration: line-through;
+    text-decoration: line-through ;
 }
 
 /* ============================ */
@@ -100,9 +102,19 @@
 
 /* responsive */
 
+@media screen and (max-width: 511px) {
+    .checkBtn {
+        padding: 0 4px;
+    }
+}
+
 @media screen and (max-width: 420px) {
     .todoRight {
         width: 2.2rem;
+    }
+
+    .checkBtn {
+        padding: 0 4px;
     }
 
 }
@@ -117,7 +129,7 @@
     }
 
     .checkBtn {
-        margin-right: 12px;
+        padding: 0 4px;
     }
 
     .todoLeft .todoText , .todoLeftComplete .todoText {
@@ -135,12 +147,12 @@
     }
 
     .todoRight {
-        width: 2.3rem;
+        width: 2.7rem;
     }
 
     .checkBtn {
         margin-right: 10px;
-        padding: 0 10px;
+        padding: 0 5px;
     }
 
     .todoLeft .todoText , .todoLeftComplete .todoText {
