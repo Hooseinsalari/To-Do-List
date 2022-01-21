@@ -14,9 +14,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <div className="App">
-      <img className="bannerDesc" src={bgDesc} />
-      <img className="banerMob" src={bgMobile} />
-      <div className="compo">
+      <div className="component">
         <TodoApp />
       </div>
       <ToastContainer />
