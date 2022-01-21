@@ -51,8 +51,12 @@ const TodoList = ({
       <div className={styles.footerContainer}>
         {todos.length ? (
           <div className={styles.footer}>
-            <p className={styles.footerFirstChild}>{unCompleteTodos} items left</p>
-            <p className={styles.footerLastChild}>Be strong and do your todos</p>
+            <p className={styles.footerFirstChild}>
+              {unCompleteTodos} items left
+            </p>
+            <p className={styles.footerLastChild}>
+              Be strong and do your todos
+            </p>
           </div>
         ) : null}
       </div>

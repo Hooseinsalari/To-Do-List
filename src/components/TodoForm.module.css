@@ -1,126 +1,130 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .container {
-    background-color: hsl(235, 24%, 19%);
-    margin: auto;
-    margin-bottom: 22px;
-    width: 30rem;
-    padding: 9px;
-    border-radius: 5px 5px 0 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: hsl(235, 24%, 19%);
+  margin: auto;
+  margin-bottom: 22px;
+  width: 30rem;
+  padding: 9px;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.upSection{
-    display: flex;
-    align-items: center;
+.upSection {
+  display: flex;
+  align-items: center;
 }
 
 .input {
-    width: 26rem;
-    background-color: hsl(235, 24%, 19%);
-    border: none;
-    outline: none;
-    height: 3rem;
-    margin-left: 20px;
-    color: #eeeeee;
+  width: 26rem;
+  background-color: hsl(235, 24%, 19%);
+  border: none;
+  outline: none;
+  height: 3rem;
+  margin-left: 20px;
+  color: #eeeeee;
 }
 
 .input[type="text"] {
-    font-size: 17px;
-    font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
 }
 
 .addBtn {
-    background-color: hsl(235, 24%, 19%);
-    border: 2px solid gray;
-    border-radius: 50%;
-    height: 26px;
-    margin-left: 10px;
-    cursor: pointer;
+  background-color: hsl(235, 24%, 19%);
+  border: 2px solid gray;
+  border-radius: 50%;
+  height: 26px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .addBtn .addIcon {
-    font-size: 22px;
-    color: hsl(234, 39%, 85%);
-    transition: color 0.2s ease-in-out;
+  font-size: 22px;
+  color: hsl(234, 39%, 85%);
+  transition: color 0.2s ease-in-out;
 }
 
 .addBtn .addIcon:hover {
-    color: hsl(236, 33%, 92%);
+  color: hsl(236, 33%, 92%);
 }
 
 .btnsContiner {
-    border-top: 1px solid #a3a3a3;
-    border-top-style: groove;
-    width: 30rem;
+  border-top: 1px solid #a3a3a3;
+  border-top-style: groove;
+  width: 30rem;
 }
 
-.cateBtn , .btnActive {
-    background-color: hsl(235, 24%, 19%);
-    border: none;
-    outline: none;
-    margin: 10px 25px 3px;
-    font-size: 16px;
-    cursor: pointer;
-    color: hsl(234, 11%, 52%);
-    transition: all 0.2s ease-in-out;
-    font-size: 17px;
-    font-family: 'Roboto', sans-serif;
-
+.cateBtn,
+.btnActive {
+  background-color: hsl(235, 24%, 19%);
+  border: none;
+  outline: none;
+  margin: 10px 25px 3px;
+  font-size: 16px;
+  cursor: pointer;
+  color: hsl(234, 11%, 52%);
+  transition: all 0.2s ease-in-out;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
 }
 
 .cateBtn:hover {
-    color: hsl(236, 33%, 92%);
+  color: hsl(236, 33%, 92%);
 }
 
 .btnActive {
-    color: hsl(220, 98%, 61%);
+  color: hsl(220, 98%, 61%);
 }
 
 /* responsive */
 
 @media screen and (max-width: 511px) {
-    .container , .btnsContiner{
-        width: 25rem;
-    }
+  .container,
+  .btnsContiner {
+    width: 25rem;
+  }
 
-    .input {
-        width: 20rem;
-    }
+  .input {
+    width: 20rem;
+  }
 }
 
 @media screen and (max-width: 417px) {
-    .container , .btnsContiner{
-        width: 23rem;
-    }
+  .container,
+  .btnsContiner {
+    width: 23rem;
+  }
 
-    .input {
-        width: 18rem;
-        margin-left: 18px;
-    }
+  .input {
+    width: 18rem;
+    margin-left: 18px;
+  }
 }
 
 @media screen and (max-width: 385px) {
-    .container , .btnsContiner{
-        width: 21rem;
-    }
+  .container,
+  .btnsContiner {
+    width: 21rem;
+  }
 
-    .input {
-        width: 17rem;
-        margin-left: 15px;
-    }
+  .input {
+    width: 17rem;
+    margin-left: 15px;
+  }
 }
 
 @media screen and (max-width: 355px) {
-    .container , .btnsContiner{
-        width: 19rem;
-    }
+  .container,
+  .btnsContiner {
+    width: 19rem;
+  }
 
-    .input {
-        width: 16rem;
-        margin-left: 10px;
-    }
+  .input {
+    width: 16rem;
+    margin-left: 10px;
+  }
 }

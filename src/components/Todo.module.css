@@ -1,168 +1,170 @@
-.todo , .todoComplete {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    border-bottom: 1px solid gray;
+.todo,
+.todoComplete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid gray;
 }
 
 .todoComplete {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 /* section left todo */
-.todoLeft , .todoLeftComplete {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.todoLeft,
+.todoLeftComplete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .checkBtn {
-    outline: none;
-    background-color: hsl(235, 24%, 19%);
-    margin-right: 22px;
-    border: 2px solid hsl(234, 11%, 52%);
-    border-radius: 50%;
-    width: 25px;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: all 0.3s ease-in-out;
+  outline: none;
+  background-color: hsl(235, 24%, 19%);
+  margin-right: 22px;
+  border: 2px solid hsl(234, 11%, 52%);
+  border-radius: 50%;
+  width: 25px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
 }
 
 .checkBtn:hover {
-    opacity: 1;
-    border: 2px solid hsl(234, 39%, 85%)
+  opacity: 1;
+  border: 2px solid hsl(234, 39%, 85%);
 }
 
 .checkBtn .checkIcon {
-    color: hsl(234, 39%, 85%);
-    margin-top: 5px;
-    visibility: hidden;
-    position: absolote;
+  color: hsl(234, 39%, 85%);
+  margin-top: 5px;
+  visibility: hidden;
+  position: absolote;
 }
 
 .todoLeftComplete .checkBtn .checkIcon {
-    visibility: visible;
+  visibility: visible;
 }
 
-.todoLeft .todoText , .todoLeftComplete .todoText {
-    color: #fff;
-    font-size: 18px;
-    text-align: left;
+.todoLeft .todoText,
+.todoLeftComplete .todoText {
+  color: #fff;
+  font-size: 18px;
+  text-align: left;
 }
 
 .todoLeftComplete p {
-    text-decoration: line-through ;
+  text-decoration: line-through;
 }
 
 /* ============================ */
 
-
 /* todo right section */
 
 .todoRight {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .editBtn {
-    border: none;
-    outline: none;
-    background-color: hsl(235, 24%, 19%);
-    cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: hsl(235, 24%, 19%);
+  cursor: pointer;
 }
 
 .editIcon {
-    font-size: 21px;
-    color: #fff;
-    opacity: 0.3;
+  font-size: 21px;
+  color: #fff;
+  opacity: 0.3;
 }
 
 .editIcon:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .deleteBtn {
-    border: none;
-    outline: none;
-    background-color: hsl(235, 24%, 19%);
-    margin-left: 8px;
-    cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: hsl(235, 24%, 19%);
+  margin-left: 8px;
+  cursor: pointer;
 }
 
 .deleteBtn .deleteIcon {
-    font-size: 24px;
-    color: #fff;
-    opacity: 0.3;
+  font-size: 24px;
+  color: #fff;
+  opacity: 0.3;
 }
 
 .deleteIcon:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* responsive */
 
 @media screen and (max-width: 511px) {
-    .checkBtn {
-        padding: 0 4px;
-    }
+  .checkBtn {
+    padding: 0 4px;
+  }
 }
 
 @media screen and (max-width: 420px) {
-    .todoRight {
-        width: 2.2rem;
-    }
+  .todoRight {
+    width: 2.2rem;
+  }
 
-    .checkBtn {
-        padding: 0 4px;
-    }
-
+  .checkBtn {
+    padding: 0 4px;
+  }
 }
 
 @media screen and (max-width: 385px) {
-    .todo , .todoComplete {
-        padding: 14px;
-    }
+  .todo,
+  .todoComplete {
+    padding: 14px;
+  }
 
-    .todoRight {
-        width: 2.5rem;
-    }
+  .todoRight {
+    width: 2.5rem;
+  }
 
-    .checkBtn {
-        padding: 0 4px;
-    }
+  .checkBtn {
+    padding: 0 4px;
+  }
 
-    .todoLeft .todoText , .todoLeftComplete .todoText {
-        color: #fff;
-        font-size: 16px;
-        text-align: left;
-
-    }
-    
+  .todoLeft .todoText,
+  .todoLeftComplete .todoText {
+    color: #fff;
+    font-size: 16px;
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 355px) {
-    .todo , .todoComplete {
-        padding: 10px;
-    }
+  .todo,
+  .todoComplete {
+    padding: 10px;
+  }
 
-    .todoRight {
-        width: 2.7rem;
-    }
+  .todoRight {
+    width: 2.7rem;
+  }
 
-    .checkBtn {
-        margin-right: 10px;
-        padding: 0 5px;
-    }
+  .checkBtn {
+    margin-right: 10px;
+    padding: 0 5px;
+  }
 
-    .todoLeft .todoText , .todoLeftComplete .todoText {
-        color: #fff;
-        font-size: 15px;
-        text-align: left;
-    }
+  .todoLeft .todoText,
+  .todoLeftComplete .todoText {
+    color: #fff;
+    font-size: 15px;
+    text-align: left;
+  }
 
-    .deleteBtn {
-        margin-left: 5px;
-    }
+  .deleteBtn {
+    margin-left: 5px;
+  }
 }
-

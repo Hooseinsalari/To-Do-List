@@ -12,11 +12,10 @@ const TodoApp = () => {
   const [filteredTodos, setFilteredTodos] = useState([]);
   // default value for category
   const [status, setStatus] = useState("all");
-  
 
   useEffect(() => {
-    filterTodos(status)
-  }, [todos, status])
+    filterTodos(status);
+  }, [todos, status]);
 
   // -------
 
@@ -28,10 +27,6 @@ const TodoApp = () => {
     };
     setTodos([...todos, newTodo]);
   };
-
-  // -------
-
-  
 
   // -------
 
@@ -75,21 +70,20 @@ const TodoApp = () => {
     const updateTodos = [...todos];
     updateTodos[index] = selectedTodo;
     setTodos(updateTodos);
-  }
+  };
 
   // -----
 
-  // save in local 
+  // save in local
 
   useEffect(() => {
-    const saveData = JSON.parse(localStorage.getItem("todos"))
-    if(saveData) setTodos(saveData)
-  }, [])
+    const saveData = JSON.parse(localStorage.getItem("todos"));
+    if (saveData) setTodos(saveData);
+  }, []);
 
   useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos))
-  }, [todos])
- 
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   return (
     <div className={styles.container}>

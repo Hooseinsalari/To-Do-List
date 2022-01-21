@@ -6,9 +6,16 @@ import styles from "./TodoForm.module.css";
 // icons
 import { FaPlusCircle } from "react-icons/fa";
 
-import {netlify, notify} from "./Toastify"
+// toastify
+import { notify } from "./Toastify";
 
-const TodoForm = ({ addTodoHandler, todos, filterTodos, setStatus, status }) => {
+const TodoForm = ({
+  addTodoHandler,
+  todos,
+  filterTodos,
+  setStatus,
+  status,
+}) => {
   const [todo, setTodo] = useState("");
 
   const inputHandler = (event) => {
@@ -16,9 +23,9 @@ const TodoForm = ({ addTodoHandler, todos, filterTodos, setStatus, status }) => 
   };
 
   const submitHandler = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     if (!todo) {
-      notify("error", "Please add your todo")
+      notify("error", "Please add your todo");
       return;
     }
     addTodoHandler(todo);
